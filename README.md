@@ -1,38 +1,49 @@
-# sv
+# Demo sveltekit app
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Prerequisites
 
-## Creating a project
+Make sure you have bun runtime installed. You can visit their [site](https://bun.sh/) for more info.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
+- for windows:
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+- for mac/linux:
+```bash
+curl -fsSL https://bun.sh/install | bash
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+## Install the dependencies
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun i
 ```
+
+## Run
+```bash
+bun dev
+```
+You can view the frontend on http://localhost:5173
+
 
 ## Building
 
 To create a production version of your app:
 
 ```bash
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
+To start the production server:
+```bash
+bun start
+```
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Docker
+You can build the image locally by using the included `Dockerfile`
+```bash
+docker build -t <your-org>/<app-name>:latest .
+```
+
+## Reference:
+- https://bun.sh/
+- https://www.npmjs.com/package/svelte-adapter-bun#port-and-host
