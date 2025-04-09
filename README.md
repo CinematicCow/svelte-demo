@@ -37,6 +37,7 @@ To start the production server:
 ```bash
 bun start
 ```
+By default the production server listnes on host `0.0.0.0` & port `3000`. You can change that using the `HOST` and `PORT` environment variables.
 
 ## Docker
 You can build the image locally by using the included `Dockerfile`
